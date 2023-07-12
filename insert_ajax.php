@@ -191,7 +191,7 @@
 
 
         <!-- Modal -->
-        <div class="modal fade bg-secondary-subtle" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog ">
                 <div class="modal-content">
                     <div class="modal-header bg-dark text-white">
@@ -277,7 +277,7 @@
 
 
 
-        <div id="modal" class="modal bg-secondary-subtle" style='display: none;'>
+        <div id="modal" class="modal " tabindex="-1" aria-hidden="true" style='display: none;'>
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div id="modal-form" class="text-center">
