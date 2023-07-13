@@ -36,8 +36,7 @@ if (mysqli_num_rows($result) > 0) {
                 <tr>
                     
                     <span class='input-group-text'>id</span>
-                    <span class='input-group-text'>{$row["id"]}</span>
-                    <td><input type='text'  hidden id='edit_id' value='{$row["id"]}'></td>
+                    <td><input type='text'  disabled='disabled' id='edit_id' value='{$row["id"]}'></td>
                 </tr>
             </div><br>
             <div class='col-mb-3 text-center input-group'>
