@@ -15,9 +15,9 @@
 
 </html>
 <?php
-
+include 'mysqli.config.php';
 $e_id = $_POST["id"];
-$con = new mysqli("localhost", "root", "", "nodedemo") or die("Connection failed");
+// $con = new mysqli("localhost", "root", "", "nodedemo") or die("Connection failed");
 
 $query = "SELECT * from users where id=$e_id";
 $result = $con->query($query) or die('Connection failed');

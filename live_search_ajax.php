@@ -1,9 +1,9 @@
 <?php
-
+include 'mysqli.config.php';
 $search_val = $_POST["search"];
 
 
-$con = new mysqli("localhost", "root", "", "nodedemo") or die("Connection failed");
+// $con = new mysqli("localhost", "root", "", "nodedemo") or die("Connection failed");
 
 $query = "SELECT * from users where Name like '%$search_val%' or Village like '%$search_val%'";
 $result = $con->query($query) or die('Connection failed');

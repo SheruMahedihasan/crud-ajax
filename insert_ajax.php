@@ -43,8 +43,12 @@
                 var village_var = $("#village").val();
                 var email_var = $("#email").val();
                 if (name_var == "" || village_var == "" || email_var == "") {
-                    $("#error_msg").html("All field are required.").slideDown();
-                    $("#success_msg").slideUp();
+                    $("#error_msg").fadeIn();
+                    $("#error_msg").html("All field are required.");
+                    setTimeout(function() {
+                        $("#error_msg").fadeOut();
+                    }, 2000);
+
                 } else {
                     $.ajax({
                         url: "insert_query.php",
@@ -59,8 +63,12 @@
                             if (data == 1) {
                                 loadtable();
                                 $("#addform").trigger("reset");
-                                $("#success_msg").html("Successfully data inserted.").slideDown();
-                                $("#error_msg").slideUp();
+                                $("#success_msg").fadeIn();
+                                $("#success_msg").html("Successfully data inserted.");
+                                setTimeout(function() {
+                                    $("#success_msg").fadeOut();
+                                }, 2000);
+
                             } else {
                                 x
                                 $("#success_msg").slideUp();
@@ -90,8 +98,12 @@
                             if (data == 1) {
                                 $(element).closest("tr").fadeOut();
                             } else {
-                                $("#error_msg").html("Can't Delete Record.").slideDown();
-                                $("#success_msg").slideUp();
+                                $("#error_msg").fadeIn();
+                                $("#error_msg").html("Can't Delete Record.");
+                                setTimeout(function() {
+                                    $("#error_msg").fadeOut();
+                                }, 2000);
+
                             }
                         }
                     });

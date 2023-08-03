@@ -1,7 +1,8 @@
 <?php
 // echo "hehje";
 // exit;
-$con = new mysqli("localhost", "root", "", "nodedemo") or die("Connection failed");
+include 'mysqli.config.php';
+// $con = new mysqli("localhost", "root", "", "nodedemo") or die("Connection failed");
 
 $query = "SELECT * from users";
 $result = $con->query($query) or die('Connection failed');
