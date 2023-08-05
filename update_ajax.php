@@ -32,7 +32,7 @@ if (mysqli_num_rows($result) > 0) {
 
         $output .= "
         <div class='col-md-12  text-center ms-5'>
-            <div class='col-md-12 text-center input-group'>
+            <div class='col-md-12 text-center input-group d-none'>
                 <tr>
                     
                     <span class='input-group-text'>id</span>
