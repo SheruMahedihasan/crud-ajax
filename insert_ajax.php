@@ -69,8 +69,9 @@
                                     $("#success_msg").fadeOut();
                                 }, 2000);
 
+                                $('#exampleModal').modal('hide');
+
                             } else {
-                                x
                                 $("#success_msg").slideUp();
                             }
                         }
@@ -136,13 +137,16 @@
             $("#close_btn").on("click", function() {
                 $("#modal").hide();
             });
+
             // $("#save_btn").on("click", function() {
             // $("#exampleModal").hide();
             // $("#tbl_load").fadeIn();
             // });
-            $(document).on("click", "#save_btn", function() {
-                location.href = "insert_ajax.php";
-            });
+
+
+            // $(document).on("click", "#save_btn", function() {
+            //     location.href = "insert_ajax.php";
+            // });
 
 
             // save update form
@@ -197,7 +201,7 @@
 <body>
 
 
-    <div class="container table-responsive d-grid justify-content-center">
+    <div class="container table-responsive d-grid justify-content-center" id="insert_record_model">
 
         <!-- Button trigger modal -->
 
@@ -237,8 +241,6 @@
                                 </form>
                             </td>
                         </div>
-
-
 
                     </div>
 
