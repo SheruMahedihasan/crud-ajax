@@ -1,12 +1,12 @@
 <?php
 include 'mysqli.config.php';
 
-$query = "SELECT * from users";
+$query = "SELECT * FROM `users` ORDER BY `id` DESC";
 $result = $con->query($query) or die('Connection failed');
 $output = "";
 if (mysqli_num_rows($result) > 0) {
 
-    $id = 1;
+    $id = mysqli_num_rows($result);
 
     while ($row = mysqli_fetch_assoc($result)) {
         $output .= " 
@@ -18,7 +18,7 @@ if (mysqli_num_rows($result) > 0) {
             <td><button class='edit_btn' data-eid='{$row["id"]}' style='background-color:green;color:white'>Edit</button></td>
             <td><button class='delete_btn' data-id='{$row["id"]}' style='background-color:red;color:white'>Delete</button></td>
         </tr>";
-        $id += 1;
+        $id -= 1;
     }
     mysqli_close($con);
     echo $output;
