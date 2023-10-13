@@ -158,7 +158,7 @@
 
 
             // Live search 
-            $("#search").on("keyup", function() {
+            $("#search").on("keypress", function() {
                 var search_term = $(this).val();
                 $.ajax({
                     url: "live_search_ajax.php",
